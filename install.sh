@@ -6,7 +6,7 @@ echo "+++++++++++++++++++++++++++++++++"
 if [[ $OSTYPE == linux-gnu* ]]; then
   pkt_install_cmd="sudo apt-get install"
 elif [[ $OSTYPE == darwin* ]]; then
-  pkt_install_cmd="brew intsall"
+  pkt_install_cmd="brew install"
 else
   echo "OS not support !"
   exit

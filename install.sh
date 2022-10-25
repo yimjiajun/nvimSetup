@@ -89,17 +89,7 @@ if [ -x "$(command -v tmux)" ]; then
 	fi
 
 	if ! [[ -f "$HOME/.tmux.conf" ]]; then
-		echo "set-option -g prefix C-' '
-# List of plugins
-set -g @plugin 'tmux-plugins/tpm'
-set -g @plugin 'tmux-plugins/tmux-sensible'
-# Plugin Themes
-set -g @plugin 'seebi/tmux-colors-solarized'
-# theme select
-set -g @colors-solarized 'dark'
-# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
-run '~/.tmux/plugins/tpm/tpm'" > ~/.tmux.conf
-		# type this in terminal if tmux is already running
+		cp config/.tmux.conf ~/
 		tmux source ~/.tmux.conf
 
 		echo "+++++++++++++++++++++++++++++++++"
